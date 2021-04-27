@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Weather app</h1>
+<h1 align="center">Github Jobs Mater</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://weather-app-master-psi.vercel.app/">
+    <a href="https://github-jobs-master-seven.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
+    <a href="https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps">
       Challenge
     </a>
   </h3>
@@ -33,11 +33,16 @@
 
 ## Overview
 
-![screenshot](./images/demo.png)
+![screenshot](./images/demo.jpg)
 
-Developed with NextJS + react-select + Tailwindcss.<br/>
+Developed with NextJS + material-ui + Tailwindcss.<br/>
 <br/>
 For the NextJS template, I used the NextJS Typescript Boilerplate from the official examples.<br/>
+The SSG of NEXTJS was used.<br/>
+<br/>
+The context of hooks was used to maintain the state.<br/>
+<br/>
+When displaying text that contains HTML tags, I used "Isomorphic DOMPurify" to convert it to cleanText.<br/>
 <br/>
 In order to support CORS, we used the NEXTJS API as PROXY.
 <br/>
@@ -52,9 +57,10 @@ Thanks for viewing :)
 
 - [NextJS](https://nextjs.org/)
 - [NextJS Typescript Boilerplate](https://github.com/vercel/next.js/tree/master/examples/with-typescript-eslint-jest)
-- [React Select](https://react-select.com/)
+- [Material-UI](https://material-ui.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwindcss](https://tailwindcss.com/)
+- [Isomorphic DOMPurify](https://www.npmjs.com/package/isomorphic-dompurify)
 - [Docker](https://www.docker.com/)
 
 ## Features
@@ -69,10 +75,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/masa-fullstack/weather-app-master
+$ git clone https://github.com/masa-fullstack/github-jobs-master
 
 # Change directory
-$ cd weather-app-master
+$ cd github-jobs-master
 
 ```
 
@@ -90,7 +96,6 @@ $ docker-compose up
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
 - [Tailwind CHEAT SHEET](https://nerdcave.com/tailwind-cheat-sheet)
-- [That's right. I am the SWR that makes React simple.](https://zenn.dev/uttk/articles/b3bcbedbc1fd00)
 
 ## Contact
 
