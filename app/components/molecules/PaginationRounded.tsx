@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Pagination from '@material-ui/lab/Pagination'
-import { PAGE_EVENT, usePageDispatch, usePageStore } from './hooks/pageContext'
+import { PAGE_EVENT, usePageDispatch, usePageStore } from '../hooks/pageContext'
 
 type Props = {
   maxPage: number

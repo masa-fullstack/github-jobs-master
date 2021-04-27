@@ -1,7 +1,7 @@
 import { memo, Dispatch, SetStateAction } from 'react'
 import usePositions from './hooks/usePositiojns'
 import Card from './molecules/Card'
-import PaginationRounded from './PaginationRounded'
+import PaginationRounded from './molecules/PaginationRounded'
 import { PAGE_SIZE } from './GithubJobsApp'
 import { useSearchStore } from './hooks/searchContext'
 import Link from 'next/link'
