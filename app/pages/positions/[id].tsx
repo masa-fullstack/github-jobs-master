@@ -34,7 +34,7 @@ const Position = ({
             </span>
           </div>
           <div className="mt-3">
-            <TagText text={position.how_to_apply} />
+            <TagText text={position?.how_to_apply} />
           </div>
         </div>
         {/* RIGHT */}
