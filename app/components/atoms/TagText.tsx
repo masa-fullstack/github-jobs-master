@@ -9,6 +9,7 @@ const TagText: React.FC<Props> = (props) => {
 
   return (
     <div
+      className="overflow-x-hidden"
       dangerouslySetInnerHTML={{
         __html: cleanText,
       }}

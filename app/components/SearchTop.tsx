@@ -57,7 +57,11 @@ const SearchTop: React.FC = () => {
       value: e.target.value,
     })
   }
-  const handleSearch = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleSearch = (
+    e:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement>
+  ) => {
     e.preventDefault()
     searchDispatch({ type: SEARCH_EVENT, value: inputState })
   }
@@ -75,7 +79,7 @@ const SearchTop: React.FC = () => {
             placeholder="Title, companies, expertise or benefits"
             InputProps={{
               startAdornment: (
-                <span className="material-icons text-gray-400">
+                <span className="material-icons text-gray-400 mr-2">
                   work_outline
                 </span>
               ),
@@ -85,6 +89,11 @@ const SearchTop: React.FC = () => {
             }}
             value={inputState.description}
             onChange={(e) => handleChange(e)}
+            onKeyPress={(e) => {
+              if (e.key == 'Enter') {
+                handleSearch(e)
+              }
+            }}
           />
           <Button
             variant="contained"

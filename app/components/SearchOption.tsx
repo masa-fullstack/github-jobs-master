@@ -9,6 +9,7 @@ import {
   useInputDispatch,
   useInputStore,
 } from './hooks/inputContext'
+import { SEARCH_EVENT, useSearchDispatch } from './hooks/searchContext'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,6 +34,7 @@ const SearchOption: React.FC = () => {
   const classes = useStyles()
   const inputState = useInputStore()
   const inputDispatch = useInputDispatch()
+  const searchDispatch = useSearchDispatch()
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -50,6 +52,15 @@ const SearchOption: React.FC = () => {
       target: e.target.name,
       value: e.target.checked,
     })
+  }
+
+  const handleSearch = (
+    e:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement>
+  ) => {
+    e.preventDefault()
+    searchDispatch({ type: SEARCH_EVENT, value: inputState })
   }
 
   return (
@@ -75,11 +86,16 @@ const SearchOption: React.FC = () => {
         placeholder="City, state, zip code or country"
         InputProps={{
           startAdornment: (
-            <span className="material-icons text-gray-400">public</span>
+            <span className="material-icons text-gray-400 mr-2">public</span>
           ),
         }}
         defaultValue={inputState.locationText}
         onChange={(e) => handleChange(e)}
+        onKeyPress={(e) => {
+          if (e.key == 'Enter') {
+            handleSearch(e)
+          }
+        }}
       />
 
       <div className="mt-5"></div>
