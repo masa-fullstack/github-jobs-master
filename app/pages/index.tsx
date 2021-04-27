@@ -3,7 +3,7 @@ import GithubJobsApp from '../components/GithubJobsApp'
 
 export const Home = (): JSX.Element => {
   return (
-    <Layout title="Weather app">
+    <Layout title="Github Jobs">
       <GithubJobsApp />
     </Layout>
   )
