@@ -40,21 +40,21 @@ const Position = ({
         {/* RIGHT */}
         <div className="md:col-span-7 col-span-1">
           <div className="flex md:flex-row md:items-center flex-col ">
-            <div className="text-xl font-bold mb-1 mr-2">{position.title}</div>
+            <div className="text-xl font-bold mb-1 mr-2">{position?.title}</div>
             <div className="my-3">
-              <FullTimeIcon type={position.type} />
+              <FullTimeIcon type={position?.type} />
             </div>
           </div>
-          <DaysIcon stringDate={position.created_at} />
+          <DaysIcon stringDate={position?.created_at} />
           <div className="flex items-center my-3">
-            <Icon src={position.company_logo} />
+            <Icon src={position?.company_logo} />
             <div className="ml-2">
-              <div className="mb-2">{position.company}</div>
-              <LocationIcon location={position.location} />
+              <div className="mb-2">{position?.company}</div>
+              <LocationIcon location={position?.location} />
             </div>
           </div>
           <div>
-            <TagText text={position.description} />
+            <TagText text={position?.description} />
           </div>
         </div>
       </div>
